@@ -1,0 +1,35 @@
+.todoItem{
+    font-weight: bolder;
+    font-size:  1.5rem;
+    
+    &__group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        &__item{
+            width: 22.4rem;
+            display: flex;
+            align-items: center;
+            padding: 0.25rem 0 0.25rem 0;
+            justify-content: space-between;
+            
+         
+            &__button{
+                width: 3rem;
+                height: 2.5rem;
+                border: none;
+                border-radius: 0.5rem;
+            }
+        }
+
+
+        
+    }
+
+
+}

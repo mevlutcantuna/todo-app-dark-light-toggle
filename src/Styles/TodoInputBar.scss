@@ -1,0 +1,25 @@
+.todoInputBar{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+    &__input{
+        width: 18rem;
+        height: 2.2rem;
+        margin-right: 1rem;
+        border-radius: 0.5rem;
+        outline: none;
+        padding-left: 0.5rem;
+        border: none;
+    }
+
+    &__button{
+        width: 3rem;
+        border-radius: 0.5rem;
+        outline: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+}
