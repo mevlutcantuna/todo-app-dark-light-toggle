@@ -8,7 +8,6 @@ import { dark,light } from "../Theme";
 function TodoInputBar(props) {
     
     const {handleChange , inputValue , addItem , toggle} = props.infoInputBar
-    console.log(toggle);
     return (
         <div style={toggle ? dark : light} className='todoInputBar'>
             <input onChange={handleChange} value={inputValue} type='text' className='todoInputBar__input'/>

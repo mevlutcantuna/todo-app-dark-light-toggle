@@ -8,7 +8,6 @@ import { dark , light} from '../Theme';
 function Header(props) {
     
     const {toggle , toggleChange} = props
-
     return (
         <div className='header' style={toggle ? dark : light}>
            <div className='header__title'>TodoApp</div> 

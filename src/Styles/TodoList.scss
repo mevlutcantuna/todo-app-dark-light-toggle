@@ -1,3 +1,13 @@
 .todoList{
     height: calc(100vh - 10.5rem);
+
+    &__pagination{
+        margin: 2rem 37% 0 37%;
+        padding-bottom: 4.25rem;
+        width: 50rem;
+
+        &__none{
+            display: none;
+        }
+    }
 }

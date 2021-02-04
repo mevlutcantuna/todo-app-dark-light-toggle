@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 import Header from './Components/Header';
 import TodoInputBar from './Components/TodoInputBar';
@@ -14,6 +13,7 @@ function App() {
   const toggleChange = () => {
     setToggle(!toggle)
   }
+  console.log(list);
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
@@ -24,13 +24,14 @@ function App() {
     let newItem = {
       value: inputValue,
       id: Math.random(),
+      checkbox: false,
     }
-    
-    if(inputValue.trim() === ''){
+
+    if (inputValue.trim() === '') {
       alert('Please Enter Something Input is Empty....');
     }
-    else{
-      newList.push(newItem);
+    else {
+      newList.unshift(newItem);
     }
 
     setList(newList);
@@ -39,10 +40,22 @@ function App() {
 
   const removeItem = (id) => {
     const newList = [...list];
-
     const newLists = newList.filter(item => item.id !== id);
     setList(newLists);
-  }  
+  }
+
+
+
+
+  const handleCheckbox = (id) => {
+    const newList = list.map(item => {
+      if(item.id === id){
+        return {...item,checkbox: !item.checkbox}
+      }
+      return item
+    })
+    setList(newList);
+  }
 
   const infoInputBar = {
     handleChange,
@@ -55,7 +68,10 @@ function App() {
     toggle,
     list,
     removeItem,
+    handleCheckbox
   }
+
+
 
   return (
     <div className="App">
