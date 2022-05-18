@@ -10,7 +10,8 @@ function Header(props) {
     const {toggle , toggleChange} = props
     return (
         <div className='header' style={toggle ? dark : light}>
-           <div className='header__title'>TodoApp</div> 
+           <h1 className='header__title'>TodoApp</h1> 
+           <button>Mevlüt Can</button>
             <button className='header__button' onClick={toggleChange}>
                 {toggle ? <Brightness7Icon style={{ fontSize: '30px'}}/> : <Brightness4Icon style={{ fontSize: '30px' , color:'white'}}/>}
             </button>
