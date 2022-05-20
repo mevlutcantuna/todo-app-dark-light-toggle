@@ -7,11 +7,10 @@ import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import { errorDark, errorLight } from "../Theme";
 
 function TodoItem(props) {
-
   const {list,paginationPage ,handleCheckbox,removeItem,toggle} = props;
-
   const indexOfFirstItem =  (paginationPage - 1) * 8;
   const indexOfLastItem =   indexOfFirstItem + 8;
+  
   const newList = list.slice(indexOfFirstItem,indexOfLastItem);
 
   return (

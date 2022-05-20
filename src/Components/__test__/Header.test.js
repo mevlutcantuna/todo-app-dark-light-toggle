@@ -1,10 +1,16 @@
 import { render, screen } from "@testing-library/react";
-
+import userEvent from "@testing-library/user-event";
 import Header from "../Header";
 
-test("header renders correctly... ", () => {
+beforeEach(() => {
   render(<Header />);
+});
 
+test("header name renders correctly", () => {
   expect(screen.getByRole("heading")).toHaveTextContent(/todoapp/i);
-  console.log(screen.getAllByRole("button")[0].textContent);
+});
+
+test("dark-light button renders correctly", () => {
+  const btn = screen.getByRole("button");
+  expect(btn).toHaveClass("off");
 });

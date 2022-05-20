@@ -6,16 +6,12 @@ import TodoItem from './TodoItem';
 import {dark, light} from '../Theme'
 import {Pagination} from "@material-ui/lab";
 
-function TodoList(props) {
-    
+function TodoList(props) {   
     const { list , removeItem, toggle, handleCheckbox } = props.infoList;
-
     const [paginationPage,setPaginationPage] = useState(1);
-
     const pageItemsCount = Math.ceil(list.length/8)
-
+    
     const handlePaginationChange = (event,page) => {
-        
         if(page !== undefined){
             setPaginationPage(page)
         }
