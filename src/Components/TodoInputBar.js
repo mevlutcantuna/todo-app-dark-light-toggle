@@ -5,19 +5,18 @@ import AddIcon from "@material-ui/icons/Add";
 
 import { dark, light } from "../Theme";
 
-function TodoInputBar(props) {
-
+function TodoInputBar({ infoInputBar }) {
   return (
-    <div style={props.toggle ? dark : light} className="todoInputBar">
+    <div style={infoInputBar?.toggle ? dark : light} className="todoInputBar">
       <input
-        onChange={props.handleChange}
-        value={props.inputValue}
+        onChange={infoInputBar?.handleChange}
+        value={infoInputBar?.inputValue}
         type="text"
         className="todoInputBar__input"
       />
       <button
-        style={props.toggle ? light : dark}
-        onClick={props.addItem}
+        style={infoInputBar?.toggle ? light : dark}
+        onClick={infoInputBar?.addItem}
         className="todoInputBar__button"
       >
         add

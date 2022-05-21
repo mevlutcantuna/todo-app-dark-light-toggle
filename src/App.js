@@ -5,7 +5,6 @@ import TodoInputBar from './Components/TodoInputBar';
 import TodoList from './Components/TodoList';
 
 function App() {
-
   const [toggle, setToggle] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const [list, setList] = useState([]);
