@@ -11,11 +11,8 @@ function Header(props) {
   return (
     <div className="header" style={toggle ? dark : light}>
       <h1 className="header__title">TodoApp</h1>
-      <button onClick={toggleChange} className="header__button">
-        {toggle ? "Light" : "Dark"}
-      </button>
 
-      {/* {toggle ? (
+      {toggle ? (
         <button onClick={toggleChange} className="header__button on">
           <Brightness7Icon style={{ fontSize: "30px" }} />
         </button>
@@ -27,7 +24,7 @@ function Header(props) {
         >
           <Brightness4Icon style={{ fontSize: "30px", color: "white" }} />
         </button>
-      )} */}
+      )}
     </div>
   );
 }

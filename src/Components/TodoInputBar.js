@@ -19,7 +19,7 @@ function TodoInputBar({ infoInputBar }) {
         onClick={infoInputBar?.addItem}
         className="todoInputBar__button"
       >
-        add
+        <AddIcon />
       </button>
     </div>
   );
